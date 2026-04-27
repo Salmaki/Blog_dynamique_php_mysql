@@ -1,0 +1,145 @@
+:root {
+  --bg-dark: #0f0f1a;
+  --card-dark: #1c1c2e;
+
+  --rose: #ff4da6;
+  --rose-light: #ffb3d9;
+
+  --violet: #8a2be2;
+  --white: #ffffff;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background-color: var(--bg-dark);
+    color: var(--white);
+    font-family: sans-serif;
+}
+
+
+header{
+    position: sticky;
+    top: 0 ;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    padding: 10px 20px;
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+   border-bottom: 1px solid var(--rose);
+}
+
+
+.logo{
+    font-weight: 600;
+}
+
+
+span{
+    color: var(--rose);
+}
+
+nav a{
+    text-decoration: none;
+    margin-left: 20px;
+    color: var(--rose);
+    font-weight: 600;
+}
+
+
+header button{
+    background-color: transparent;
+    border: 2px solid var(--rose);
+    padding: 6px 8px;
+    border-radius: 17px;
+    font-weight: 600;
+}
+
+
+main{
+   padding: 30px;
+
+
+}
+
+main h1{
+    font-size: 84px;
+    text-align: center;
+    margin: 80px 0;
+}
+.article_continer{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3,1fr);
+
+    
+}
+article{
+    background-color: var(--card-dark);
+    border: 2px solid var(--rose);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+   
+
+
+
+
+
+}
+article a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 600;
+}
+article h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    font-size: 20px;
+    margin: 15px;
+
+
+}
+article p {
+    margin: 0 15px 15px;
+    color: #ccc;
+    line-height: 1.5;
+    font-size: 14px;
+}
+.img-card{
+  
+    padding: 0;
+   
+}
+img{
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+}
+
+footer {
+  background: var(--rose-light);
+  color: var(--card-dark);
+  text-align: center;
+  padding: 20px 10px;
+  font-family: Arial, sans-serif;
+}
+
+footer .copyright p {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+
+footer:hover {
+  background:var(--rose);
+}

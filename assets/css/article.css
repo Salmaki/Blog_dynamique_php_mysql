@@ -1,0 +1,12 @@
+.article-main{
+    padding: 30px 80px ;
+    min-height: 100dvh;
+    
+    
+}
+.img-class{
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
+
+}
