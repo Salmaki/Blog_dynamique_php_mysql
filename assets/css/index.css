@@ -22,7 +22,7 @@ body{
 }
 
 
-header{
+header {
     position: sticky;
     top: 0 ;
     left: 0;
@@ -46,21 +46,18 @@ span{
     color: var(--rose);
 }
 
-nav a{
-    text-decoration: none;
-    margin-left: 20px;
-    color: var(--rose);
-    font-weight: 600;
-}
 
-
-header button{
+.connect {
     background-color: transparent;
     border: 2px solid var(--rose);
-    padding: 6px 8px;
+    padding: 6px 12px;
     border-radius: 17px;
     font-weight: 600;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
 }
+
 
 
 main{
