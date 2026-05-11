@@ -8,9 +8,10 @@
      public function register($nom, $email, $password){
         $sql="INSERT into utilisateur (nom,email,password) VALUES(:nom,:email,:password)";
         $stmt=$this->conn->prepare($sql);
+         $password_hashed= password_hash($password,PASSWORD_DEFAULT);
          $stmt->bindParam(":nom",$nom);
          $stmt->bindParam(":email",$email);
-         $stmt->bindParam(":password",$password);
+         $stmt->bindParam(":password",$password_hashed);
          if($stmt->execute()){
             return true;
          }else{

@@ -1,6 +1,10 @@
 <?php 
+session_start();
 require_once'config/database.php';
 require_once'config/article.php';
+if (isset($_SESSION['user_id'])) {
+    $utilisateur= $_SESSION['nom'];
+}
 $database = new Database();
 $db = $database->connect();
 $article = new Article($db); 
@@ -18,8 +22,15 @@ $articles = $article->readAll();
 <body>
 
     <header>
-       <div class="logo"> Salma<span>Blog</span>.</div>
-       <a href="registre.php" class="connect">Se Connecter</a>
+        <div class="logo"> Salma<span>Blog</span>.</div>
+        <div>
+        <?php if (!isset($utilisateur)) :?>
+            <a href="login.php" class="connect">Se Connecter</a>
+            <?php else:?>
+            <a href="lougout.php" class="connect">Déconnecter</a>
+            <span style="color:  #ff4da6;">@<?= $utilisateur ?></span>
+            <?php endif; ?>
+        </div>
     </header>
     <main>
         <h1>Bienvenue sur <br> Salma<span>Blog</span>.</h1>
